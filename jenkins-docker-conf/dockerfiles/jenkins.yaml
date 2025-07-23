@@ -1,0 +1,24 @@
+jenkins:
+  numExecutors: 4
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "admin"
+  authorizationStrategy: loggedInUsersCanDoAnything
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - basicSSHUserPrivateKey:
+          id: "jenkins-ssh-agent-private-key"
+          description: "private ssh key for jenkins agent "
+          privateKeySource:
+            directEntry:
+              privateKey: ${readFile:/ssh-dir/jenkins_agent_ed}
+          scope: SYSTEM
+          username: "jenkins"
+unclassified:
+  location:
+    url: "http://127.0.0.1:8080/"

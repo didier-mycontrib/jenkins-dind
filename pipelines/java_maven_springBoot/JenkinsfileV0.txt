@@ -1,0 +1,12 @@
+pipeline {
+    agent {
+        docker { image 'maven:3.9-amazoncorretto-21-debian' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
+}

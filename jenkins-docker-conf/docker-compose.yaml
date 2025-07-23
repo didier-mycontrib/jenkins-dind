@@ -1,0 +1,26 @@
+
+services:
+  jenkins_controller:
+    build: dockerfiles/.
+    restart: on-failure
+    privileged: true
+    user: root
+    ports:
+      - 8080:8080
+      - 50000:50000
+    container_name: jenkins_controller_container
+    volumes:
+      - jenkins_home:/var/jenkins_home # Mounts the jenkins_home volume to the /var/jenkins_home path inside the container
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/bin/docker:/usr/bin/docker
+    
+    healthcheck:
+      test: ["CMD-SHELL", "[ -f /ssh-dir/conductor_ok ] || exit 1"]
+      # Checks if the conductor_ok file exists in the /ssh-dir path
+      interval: 5s
+      timeout: 10s
+      retries: 5
+      
+volumes:
+  jenkins_home:      
+  

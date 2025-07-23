@@ -1,0 +1,1 @@
+ln -s /mnt/c/tp/local-git-mycontrib-repositories/jenkins-dind jenkins-dind
