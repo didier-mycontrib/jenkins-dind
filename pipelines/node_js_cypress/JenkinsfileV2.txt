@@ -16,7 +16,7 @@ pipeline {
     }
       stage('Test') {
             steps {
-                echo 'lancement de tests unitaires (ex: jest):
+                echo 'lancement de tests unitaires (ex: jest): '
                 sh 'npm run test'
 
 		echo 'lancement de test e2e (ex cypress) avec script "ic" préparé dans package.json ' 
