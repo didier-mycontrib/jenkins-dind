@@ -12,8 +12,8 @@ commons-lang3-api:3.18.0-98.v3a_674c06072d
 commons-text-api:1.13.1-176.v74d88f22034b_
 configuration-as-code:1971.vf9280461ea_89
 coverage:2.7.1
-credentials-binding:702.vfe613e537e88
-credentials:1419.v2337d1ceceef
+credentials-binding:696.v256688029804
+credentials:1415.v831096eb_5534
 display-url-api:2.209.v582ed814ff2f
 docker-workflow:621.va_73f881d9232
 durable-task:587.v84b_877235b_45
@@ -58,7 +58,7 @@ pipeline-stage-step:322.vecffa_99f371c
 pipeline-stage-tags-metadata:2.2255.v56a_15e805f12
 pipeline-stage-view:2.38
 plain-credentials:199.v9f8e1f741799
-plugin-util-api:6.1167.v022176c7e0ca_
+plugin-util-api:6.1.0
 resource-disposer:0.25
 scm-api:704.v3ce5c542825a_
 script-security:1373.vb_b_4a_a_c26fa_00
