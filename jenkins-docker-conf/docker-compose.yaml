@@ -1,6 +1,8 @@
 #memo
 #NB: -port: host_port:container_port
 
+volumes:
+  jenkins_home:   
 
 services:
   jenkins_controller:
@@ -13,7 +15,8 @@ services:
       # - 50000:50000 (50000 is only useful for JNLP agent)
     container_name: jenkins_controller_container
     volumes:
-      - /var/my-docker-volumes/jenkins:/var/jenkins_home
+      - jenkins_home:/var/jenkins_home
+      #- /var/my-docker-volumes/jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/bin/docker:/usr/bin/docker
       
